@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+
+<courses>
+    <course>
+        <title>MCA</title>
+        <description>The MCA course is a full-time two years (four semesters) Master Degree in Computer Application. The degree helps interested students in setting up a sound academic base for an advanced career in Computer Applications.</description>
+    </course>
+    <course>
+        <title>B.Tech</title>
+        <description>The B.Tech course is a full-time four years (eight semesters) undergraduate Degree in Computer Application. The degree helps interested students in setting up a sound academic base for an advanced career in Computer Applications.</description>
+    </course>
+    <course>
+        <title>M.Tech</title>
+        <description>The M.Tech is a postgraduate degree course in computer applications for a duration of 2 years. The field relates to the design, development, and use of computer applications.</description>
+    </course>
+
+    
+   
+</courses>

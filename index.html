@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <meta name="keywords" content="JSPM RSCOE">
+
+
+    <title>JSPM RSCOE PUNE</title>
+    
+    <link rel="stylesheet" href="css/main_style.css">
+
+</head>
+<body>
+    
+    <section class="header">
+        <nav>
+           
+
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="courses.xml">Course</a></li>
+                    <li><a href="fee.html">Fees</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                </ul>
+            </div> 
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+       
+        <div class="text-box">
+            <h2>JSPM's Rajarshi Shahu College of Engineering</h2>
+            <p>An Autonomous Institute Affiliated to Savitribai Phule Pune University, Approved by AICTE,<br>Accredited by NBA (UG Programs), Accredited by NAAC With "A" Grade<br>MHRD-NIRF Innovation Category Rank: 151-300</p>
+            
+            <a href="admission.html" class="hero-btn">Admission Open</a>
+        </div>
+    </section>
+
+
+    <!--Campus Section-->
+
+    <section class="campus">
+        <h1> Our Campus</h1>
+        
+            <div class="row">
+                <div class="campus-col">
+                    <img src="image/cm1.jfif" alt="">
+                    <div class="layer">
+                        <h3>Environment</h3>
+                    </div>
+                </div>
+
+                <div class="campus-col">
+                    <img src="image/cm2.jfif" alt="">
+                    <div class="layer">
+                        <h3>Community</h3>
+                    </div>
+                </div>
+
+                <div class="campus-col">
+                    <img src="image/cm3.jfif" alt="">
+                    <div class="layer">
+                        <h3>Education</h3>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <!--Facilities Section-->
+
+    <section class="facilities">
+        <h1> Our facilities</h1>
+        <p>Facilities provide for Students by JSPM RSCOE</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="image/canteen1.jpg" alt="">
+                <h3>Canteen</h3>
+                <p>The objective of the Canteen and meal service is to protect by reducing the risk of foodborne illness, with proper sanitary conditions.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="image/auditorium1.png" alt="">
+                <h3>Auditorium</h3>
+                <p>The college is having a huge indoor auditorium with a professionally-deployed acoustic system and a seating capacity of about 200 people.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="image/hostel1.jpg" alt="">
+                <h3>Hostel</h3>
+                <p>hostel consists of a separate mess, administrative office, warden quarter. In addition to well furnished rooms.</p>
+            </div>
+        </div>
+        </section>
+
+        <!--Call To Action Section-->
+
+        <!--section class="ctn">
+            <h1> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
+        </section-->
+
+         <!--Footer-->
+         <section class="footer">
+             <h4>About Us</h4>
+            <p>The JSPM RSCOE which is an autonomous college provide one of the earliest form of technical studies,
+                which has been vital in setting up the standard of brilliance.</p>
+            
+         </section>
+         <script src="javascript/main_script.js"></script>
+    <script>
+        // Load XML and XSL files
+        var xmlFile = "courses.xml";
+        var xslFile = "transform.xslt";
+
+        // Function to perform XSLT transformation
+        function transformXMLtoHTML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Load the XML and XSL content
+                    var xmlData = this.responseXML;
+                    var xslData = this.responseXML;
+
+                    // Perform the transformation
+                    var processor = new XSLTProcessor();
+                    processor.importStylesheet(xslData);
+                    var result = processor.transformToFragment(xmlData, document);
+
+                    // Display the transformed HTML content
+                    document.getElementById("xml-content").appendChild(result);
+                }
+            };
+            xhttp.open("GET", xmlFile, true);
+            xhttp.send();
+        }
+
+        // Call the function to transform XML to HTML
+        transformXMLtoHTML();
+    </script>
+    <!--Javascript is Start-->
+    
+</body>
+
+    
+    
+</html>
